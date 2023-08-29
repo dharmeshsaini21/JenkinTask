@@ -1,3 +1,4 @@
+import org.testng.Assert;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
@@ -10,6 +11,7 @@ public class TestJenkins {
 
     @Test
     public void test() {
+        Assert.fail();
         System.out.println("test method output");
     }
 }
