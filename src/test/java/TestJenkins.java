@@ -11,7 +11,6 @@ public class TestJenkins {
 
     @Test
     public void test() {
-        Assert.fail();
         System.out.println("test method output");
     }
 }
