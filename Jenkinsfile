@@ -3,7 +3,7 @@ pipeline {
   stages {
     stage('Build') {
       steps {
-        bat(script: 'mvn clean test', returnStatus: true)
+        bat(script: 'mcn clean test', returnStatus: true)
       }
     }
 
