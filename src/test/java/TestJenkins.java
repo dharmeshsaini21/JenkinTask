@@ -1,17 +1,28 @@
 import org.testng.Assert;
-import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
-public class TestJenkins {
+public class TestJenkins extends BaseClass {
 
-    @BeforeMethod
-    public void beforeMethod() {
-        System.out.println("Before method output");
+    @Test
+    public void test1(){
+        System.out.println("test 1");
     }
 
     @Test
-    public void test() {
-        System.out.println("test method output");
+    public void test2(){
+        System.out.println("test 2");
+    }
+
+    @Test
+    public void test3(){
+        System.out.println("test 3");
+    }
+
+    @Test(groups = {"browser"})
+    public void test4(){
+        driver.get("https://www.google.com");
+        System.out.println("test 4");
+        Assert.fail("explicitly fails");
     }
 }
 
