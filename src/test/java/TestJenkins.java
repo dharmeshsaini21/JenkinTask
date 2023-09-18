@@ -24,4 +24,11 @@ public class TestJenkins extends BaseClass {
         System.out.println("test 4");
         Assert.fail("explicitly fails");
     }
+
+    @Test(groups = {"browser"})
+    public void test5(){
+        driver.get("https://www.google.com");
+        System.out.println("test 5");
+        Assert.assertTrue(true, "explicitly pass");
+    }
 }
