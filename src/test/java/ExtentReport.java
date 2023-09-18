@@ -26,8 +26,8 @@ public class ExtentReport extends TestListenerAdapter implements IAnnotationTran
     public String reportDir;
 
     public void createReportDirectory(){
-        String timeStamp = new SimpleDateFormat("yyyy.MM.dd.HH.mm.ss").format(new Date());
-        reportDir = Constants.TARGET_PATH + "/test-output/Reports/" + timeStamp;
+//        String timeStamp = new SimpleDateFormat("yyyy.MM.dd.HH.mm.ss").format(new Date());
+        reportDir = Constants.TARGET_PATH + "/test-output/Reports/";
 
         if(!new File(reportDir).exists())
             new File(reportDir).mkdirs();
