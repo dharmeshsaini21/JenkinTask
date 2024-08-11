@@ -16,7 +16,7 @@ pipeline {
     stage('Zipping'){
         steps {
             sh 'mkdir report'
-            zip zipFile: 'reports.zip', archive: false, dir: 'target/surefire-reports'
+            zip zipFile: 'reports.zip', archive: false, dir: "*/surefire-reports"
             archiveArtifacts artifact: 'reports.zip', fingerprint: true
         }
     }
